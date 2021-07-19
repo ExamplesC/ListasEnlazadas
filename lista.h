@@ -15,3 +15,5 @@ extern float media(TipoLista lista);
 extern void muestra_lista(TipoLista lista);
 extern void muestra_lista_estilo_python(TipoLista lista_vacia);
 extern void muestra_lista_estilo_nuevo(TipoLista lista_vacia);
+extern TipoLista borra_cabeza(TipoLista lista);
+extern TipoLista borra_cola(TipoLista lista);

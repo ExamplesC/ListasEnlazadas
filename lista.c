@@ -109,3 +109,31 @@ void muestra_lista_estilo_nuevo(TipoLista lista) {
     }
     printf("->|\n");
 }
+
+/* Borra el primer nodo de la lista */
+TipoLista borra_cabeza(TipoLista lista) {
+    struct Nodo *aux;
+    if (!es_lista_vacia(lista)) {
+        aux = lista->sig;
+        free(lista);
+        lista = aux;
+    }
+    return lista;
+}
+
+/* Borra el último nodo de la lista */
+TipoLista borra_cola(TipoLista lista) {
+    struct Nodo *aux, *atras;
+
+    if (!es_lista_vacia(lista)) {
+        for (atras = NULL, aux = lista; aux->sig != NULL; atras = aux, aux = aux->sig);
+        free(aux);
+        if (atras == NULL) {
+            lista = NULL;
+        } else {
+            atras->sig = NULL;
+        }
+    }
+
+    return lista;
+}

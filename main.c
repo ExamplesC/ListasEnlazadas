@@ -18,6 +18,11 @@ int main() {
     muestra_lista(lista);
     muestra_lista_estilo_python(lista);
     muestra_lista_estilo_nuevo(lista);
+    lista = borra_cabeza(lista);
+    muestra_lista_estilo_nuevo(lista);
+    lista = borra_cola(lista);
+    lista = borra_cola(lista);
+    muestra_lista_estilo_nuevo(lista);
     
     return 0;
 }
